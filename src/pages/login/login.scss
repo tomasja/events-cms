@@ -1,0 +1,17 @@
+.loginBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background-color: #F7F7F7;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+    form{
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+    }
+}

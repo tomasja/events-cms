@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+//   .page_container {
+//     display: flex;
+//     justify-content: center;
+//     // align-items: center;
+//     width: 90%;
+//     margin: auto;
+//     flex: 1;
+//   }
+
+  table{
+    // width: 90%;
+    border-collapse: collapse;
+    text-indent: initial;
+    border-spacing: 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 5rem;
+
+    tr{
+        border-bottom: 1px solid #ddd;
+        vertical-align: middle;
+        height: 5rem;
+    }
+
+    .center{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

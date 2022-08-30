@@ -1,0 +1,18 @@
+.eventsInfo{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 1rem;
+    
+    .eventsData{
+        display: flex;
+        align-items: center;
+        font-size: 0.95rem;
+        color: #234944;
+    }
+
+    .icon{
+        margin-right: 5px;
+        color: #E7AD44;
+    }
+}

@@ -4,7 +4,8 @@ const mysql = require('mysql2/promise');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const DB_CONFIG = require('../../config');
-// const isLoggedIn = require('../middleware/authorization');
+const isLoggedIn = require('../middleware/authorization');
+const { assert } = require('joi');
 
 const router = express.Router();
 
@@ -18,6 +19,17 @@ const authRegisterSchema = joi.object({
 const authLoginSchema = joi.object({
   email: joi.string().required(),
   password: joi.string().min(4).required(),
+});
+
+router.get('/users', async (req, res) => {
+  try {
+    const connection = await mysql.createConnection(DB_CONFIG);
+    const [rows] = await connection.query('SELECT * FROM users');
+    await connection.end();
+    return res.json(rows);
+  } catch (error) {
+    return res.status(500).json(error);
+  }
 });
 
 router.post('/register', async (req, res) => {
@@ -104,6 +116,7 @@ router.post('/login', async (req, res) => {
       process.env.JWT_SECRET,
     );
     return res.json({
+      status: true,
       user: {
         id: user[0].id,
         full_name: user[0].full_name,

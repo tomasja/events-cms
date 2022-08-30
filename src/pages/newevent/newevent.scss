@@ -1,0 +1,27 @@
+.newEvent{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+textarea{
+    position: relative;
+    padding: 10px 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: start;
+    margin-top: 0.75rem;
+    cursor: text;
+    margin: 0;
+    border: 1px solid #ccc;
+    background-color: inherit;
+    margin-bottom: 0.8rem;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.align{
+    display: flex;
+    justify-content: space-between;
+}

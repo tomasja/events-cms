@@ -1,0 +1,31 @@
+nav {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #e7ad44;
+    
+    .logo {
+      margin: 0;
+      color: #234944;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      margin-right: 1rem;
+      &:last-child {
+        margin-right: 0;
+
+      }
+    }
+    .myEvents{
+      font-weight: 500;
+      // border: 1px solid #f89e14;
+      padding: 5px 10px;
+      border-radius: 5px;
+      background-color: #7bae4c;
+    }
+}

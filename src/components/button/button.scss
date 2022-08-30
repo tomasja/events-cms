@@ -1,0 +1,51 @@
+button{
+    position: relative;
+    padding: 12px 30px;
+    justify-content: center;
+    color: white;
+    border-radius: 3px;
+    font-size: .75rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.btn{
+    background-color: #999999;
+    text-transform: uppercase;
+}
+
+.btn-primary{
+    background-color: #e7ad44;
+    text-transform: uppercase;
+}
+
+.btn-info{
+    background-color: #234944;
+    text-transform: uppercase;
+}
+
+.btn-success{
+    background-color: #7bae4c;
+    text-transform: uppercase;
+}
+
+.btn-waring{
+    background-color: #f89e14;
+    text-transform: uppercase;
+}
+
+.btn-danger{
+    background-color: #f44336;
+    text-transform: uppercase;
+}
+
+.small{
+    padding: 6px;
+    margin-right: 3px;
+    margin-top: 0;
+    align-items: center;
+}
