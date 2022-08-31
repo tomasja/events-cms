@@ -115,29 +115,15 @@ router.post('/login', async (req, res) => {
       },
       process.env.JWT_SECRET,
     );
-    return res.json({
-      status: true,
-      user: {
-        id: user[0].id,
-        full_name: user[0].full_name,
-      },
-      token,
-    });
+
+    return res.cookie('jwt', token).json({ status: true, user, token });
   } catch (err) {
     return res.status(500).json(err);
   }
 });
 
-// router.get('/logout', isLoggedIn, async (req, res) => {
-//   try {
-//     req.user.tokens = req.user.tokens.filter((token) => {
-//       return token.token !== req.token;
-//     });
-//     await req.user.save();
-//     res.send();
-//   } catch (error) {
-//     res.status(500).send(error);
-//   }
-// });
+router.get('/logout', (req, res) =>
+  res.clearCookie('jwt').json({ status: true }),
+);
 
 module.exports = router;
